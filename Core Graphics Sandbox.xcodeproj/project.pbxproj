@@ -12,6 +12,8 @@
 		0A60680C22F47D2600BF8800 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A60680A22F47D2600BF8800 /* Main.storyboard */; };
 		0A60680E22F47D2700BF8800 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A60680D22F47D2700BF8800 /* Assets.xcassets */; };
 		0A60681122F47D2700BF8800 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A60680F22F47D2700BF8800 /* LaunchScreen.storyboard */; };
+		0A60681A22F47DA100BF8800 /* mouse.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A60681822F47DA100BF8800 /* mouse.png */; };
+		0A60681B22F47DA100BF8800 /* mouse@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A60681922F47DA100BF8800 /* mouse@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		0A60680D22F47D2700BF8800 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A60681022F47D2700BF8800 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A60681222F47D2700BF8800 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A60681822F47DA100BF8800 /* mouse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mouse.png; sourceTree = "<group>"; };
+		0A60681922F47DA100BF8800 /* mouse@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mouse@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				0A60680D22F47D2700BF8800 /* Assets.xcassets */,
 				0A60680F22F47D2700BF8800 /* LaunchScreen.storyboard */,
 				0A60681222F47D2700BF8800 /* Info.plist */,
+				0A60681822F47DA100BF8800 /* mouse.png */,
+				0A60681922F47DA100BF8800 /* mouse@2x.png */,
 			);
 			path = "Core Graphics Sandbox";
 			sourceTree = "<group>";
@@ -122,7 +128,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A60681B22F47DA100BF8800 /* mouse@2x.png in Resources */,
 				0A60681122F47D2700BF8800 /* LaunchScreen.storyboard in Resources */,
+				0A60681A22F47DA100BF8800 /* mouse.png in Resources */,
 				0A60680E22F47D2700BF8800 /* Assets.xcassets in Resources */,
 				0A60680C22F47D2600BF8800 /* Main.storyboard in Resources */,
 			);
@@ -282,8 +290,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7N8G5ZX6JP;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Core Graphics Sandbox/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -291,8 +299,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "kho.arthur.Core-Graphics-Sandbox";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -300,8 +309,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7N8G5ZX6JP;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Core Graphics Sandbox/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -309,8 +318,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "kho.arthur.Core-Graphics-Sandbox";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
