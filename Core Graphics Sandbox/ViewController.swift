@@ -18,10 +18,7 @@ class ViewController: UIViewController {
 
     currentDrawType += 1
 
-    if currentDrawType > 5
-    {
-      currentDrawType = 0
-    }
+    if currentDrawType > 5 { currentDrawType = 0 }
 
     switch currentDrawType {
     case 0: drawRectangle()
@@ -37,10 +34,13 @@ class ViewController: UIViewController {
   }
 
 
+  private let rendererSize = CGSize(width: 512, height: 512)
+
+
   func drawImagesAndText() {
 
 
-    let renderer = UIGraphicsImageRenderer(size: CGSize(width: 512, height: 512))
+    let renderer = UIGraphicsImageRenderer(size: rendererSize )
     let img = renderer.image
     { ctx in
 
@@ -70,7 +70,8 @@ class ViewController: UIViewController {
 
   func drawLines() {
 
-    let renderer = UIGraphicsImageRenderer(size: CGSize(width: 512, height: 512))
+    let renderer = UIGraphicsImageRenderer(size: rendererSize )
+
     let img = renderer.image
     { ctx in
 
@@ -107,8 +108,8 @@ class ViewController: UIViewController {
 
   func drawRotatedSquares() {
 
-    let renderer = UIGraphicsImageRenderer(
-        size: CGSize(width: 512, height: 512) )
+    let renderer = UIGraphicsImageRenderer(size: rendererSize )
+
     let img = renderer.image
     { ctx in
       ctx.cgContext.translateBy(x: 256, y: 256)
@@ -118,8 +119,10 @@ class ViewController: UIViewController {
 
       for _ in 0..<rotations
       {
-        ctx.cgContext.rotate(by: CGFloat(amt))
-        ctx.cgContext.addRect(CGRect(x: -128, y: -128, width: 256, height: 256 ))
+        ctx.cgContext.rotate(by: CGFloat(amt) )
+        ctx.cgContext.addRect(
+          CGRect(x: -128, y: -128, width: 256, height: 256 )
+        )
       }
 
       ctx.cgContext.setStrokeColor( UIColor.black.cgColor )
@@ -133,7 +136,8 @@ class ViewController: UIViewController {
 
   func drawCheckerboard() {
 
-    let renderer = UIGraphicsImageRenderer(size: CGSize(width: 512, height: 512))
+    let renderer = UIGraphicsImageRenderer(size: rendererSize )
+
     let img = renderer.image
     { ctx in
 
@@ -144,10 +148,15 @@ class ViewController: UIViewController {
         for col in 0..<8 where (row + col) % 2 == 0
         {
           ctx.cgContext.fill(
-              CGRect(x: col * 64, y: row * 64, width: 64, height: 64)
+            CGRect(x: col * 64,
+                   y: row * 64,
+                   width: 64,
+                   height: 64
+            )
           )
         }
       }
+
     }
 
     imageView.image = img
@@ -157,12 +166,16 @@ class ViewController: UIViewController {
 
   func drawCircle() {
 
-    let renderer = UIGraphicsImageRenderer(size: CGSize(width: 512, height: 512))
+    let renderer = UIGraphicsImageRenderer(size: rendererSize )
     let img = renderer.image
     { ctx in
 
-      let rectangle = CGRect(x: 0, y: 0, width: 512, height: 512 )
-          .insetBy(dx: 5, dy: 5)
+      let rectangle = CGRect(
+          x: 0,
+          y: 0,
+          width: 512,
+          height: 512 )
+         .insetBy(dx: 5, dy: 5)
 
       ctx.cgContext.setFillColor( UIColor.red.cgColor )
       ctx.cgContext.setStrokeColor( UIColor.black.cgColor )
@@ -179,11 +192,16 @@ class ViewController: UIViewController {
 
   func drawRectangle() {
 
-    let renderer = UIGraphicsImageRenderer(size: CGSize(width: 512, height: 512))
+    let renderer = UIGraphicsImageRenderer(size: rendererSize )
     let img = renderer.image
     { ctx in
 
-      let rectangle = CGRect(x: 0, y: 0, width: 512, height: 512 ).insetBy(dx: 5, dy: 5)
+      let rectangle = CGRect(
+          x: 0,
+          y: 0,
+          width: 512,
+          height: 512 )
+         .insetBy(dx: 5, dy: 5)
 
       ctx.cgContext.setFillColor( UIColor.red.cgColor )
       ctx.cgContext.setStrokeColor( UIColor.black.cgColor )
@@ -207,4 +225,3 @@ class ViewController: UIViewController {
 
 
 }
-
